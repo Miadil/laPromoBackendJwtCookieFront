@@ -12,9 +12,12 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log("poulet");
-    const response = await axios.post("/api/auth/login", {
+    const response = await axios.post("http://localhost:4242/api/auth/login", {
       email,
       password,
+    },
+    {
+      withCredentials: true, // IMPORTANT : permet d'inclure les cookies
     });
     if (response.status === 200) {
       console.log(response.status);

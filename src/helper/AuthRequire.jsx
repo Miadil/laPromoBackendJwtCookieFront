@@ -8,7 +8,7 @@ const AuthRequire = ({ children }) => {
   useEffect(() => {
     const getVerif = async () => {
       await axios
-        .get("http://localhost:4000/api/auth/authVerif", {
+        .get("http://localhost:4242/api/auth/authVerif", {
           withCredentials: true,
         })
         .catch(() => {

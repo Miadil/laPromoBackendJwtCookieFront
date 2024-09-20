@@ -5,7 +5,7 @@ const ShowMovies = () => {
   const [movies, resMovies] = useState([]);
   useEffect(() => {
     const getMovies = async () => {
-      const response = await axios.get("http://localhost:4000/api/movies", {
+      const response = await axios.get("http://localhost:4242/api/movies", {
         withCredentials: true,
       });
       console.log(response);
